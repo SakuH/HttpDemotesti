@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         //ToDO: tee koodista järkevää
+        //ToDO: toimiiko
     }
     static String convertStreamToString(java.io.InputStream is) {
         java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
