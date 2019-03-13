@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView textView = findViewById(R.id.network);
+        TextView textView = findViewById(R.id.network_test);
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().build();
         StrictMode.setThreadPolicy(policy);
@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
             URL url = new URL("https://www.oamk.fi");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             InputStream in = new BufferedInputStream(connection.getInputStream());
-            String htmlString = convertStreamToString(in);
-            textView.setText(htmlString);
+            String string = convertStreamToString(in);
+            textView.setText(string);
 
         } catch (Exception e){
             e.printStackTrace();
